@@ -51,7 +51,7 @@ node *insert(node *root , int key){
   if(key < root->key) root->left = insert(root->left, key);
   if(key> root->key ) root->right = insert(root->right , key);
   else return root;
-  root->height = 1 +max(height(root->left) , height(root->right);
+  root->height = 1 +max(height(root->left) , height(root->right));
   int balance = get_balance(root);
   //ll
   if(balance > 1 && key < root->left->key) 
